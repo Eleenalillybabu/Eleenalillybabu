@@ -1,12 +1,15 @@
-- 👋 Hi, I’m @Eleenalillybabu
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
+import pandas as pd
+import matplotlib.pyplot as plt
 
-<!---
-Eleenalillybabu/Eleenalillybabu is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+df = pd.read_excel('C:/Users/Eleena lilly babu/Downloads/Financial Sample.xlsx')
+
+unit_sold = df['Units Sold']
+
+plt.figure(figsize=(8, 6))
+plt.boxplot(unit_sold, patch_artist=True)
+
+plt.xlabel('Unit Sold ',color='violet')
+plt.title('UNIT SOLD RATIO',color ='purple')
+
+plt.tight_layout()
+plt.show()
